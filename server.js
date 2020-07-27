@@ -30,7 +30,7 @@ require("./app/routes/distillery.routes")(app);
 require("./app/routes/whisky.routes")(app);
 
 // set port, listen for requests
-const port=8080;
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}.`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
 });
